@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 export const DataContext = React.createContext();
 
-const data = require('./data.json');
+const data = require('../data.json');
 
 export class DataProvider extends Component {
   state = {

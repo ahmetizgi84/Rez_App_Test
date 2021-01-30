@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-import {DataProvider} from '../Context';
+import {DataProvider} from './Context';
 import Home from './navigation/Home';
 
 const App = () => {

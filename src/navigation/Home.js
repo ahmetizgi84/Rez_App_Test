@@ -7,7 +7,7 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import {DataContext} from '../../Context';
+import {DataContext} from '../Context';
 
 export class Home extends Component {
   static contextType = DataContext;
@@ -78,7 +78,6 @@ const List = ({cart, reduction, increase, remove}) => {
 };
 
 // STYLES _______________________________________________________________________________________
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
