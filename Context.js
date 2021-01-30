@@ -9,9 +9,6 @@ export class DataProvider extends Component {
     cart: null,
     loading: false,
     total: 0,
-    dispatch: (action) => {
-      this.setState((state) => reducer(state, action));
-    },
   };
 
   componentDidMount() {
