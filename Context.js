@@ -86,7 +86,7 @@ export class DataProvider extends Component {
 
   render() {
     const {cart, loading, total} = this.state;
-    const {_getData, _reduction, _increase, _remover} = this;
+    const {_reduction, _increase, _remover} = this;
     return (
       <DataContext.Provider
         value={{
