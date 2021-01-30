@@ -28,10 +28,7 @@ export class Home extends Component {
             <ActivityIndicator size="large" color="#00ff00" />
           </View>
         ) : (
-          <View
-            style={{
-              flex: 1,
-            }}>
+          <View style={styles.contentwrapper}>
             <ScrollView>
               <List
                 cart={cart}
@@ -91,6 +88,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  contentwrapper: {
+    flex: 1,
   },
 
   item: {

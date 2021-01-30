@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import {DataProvider} from '../Context';
 import Home from './navigation/Home';
 
@@ -7,7 +7,7 @@ const App = () => {
   return (
     <DataProvider>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={{flex: 1}}>
+      <SafeAreaView style={styles.container}>
         <Home />
       </SafeAreaView>
     </DataProvider>
@@ -15,3 +15,9 @@ const App = () => {
 };
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
