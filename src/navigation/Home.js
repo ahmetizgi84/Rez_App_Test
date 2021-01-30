@@ -29,14 +29,20 @@ export class Home extends Component {
           </View>
         ) : (
           <View style={styles.contentwrapper}>
-            <ScrollView>
-              <List
-                cart={cart}
-                reduction={_reduction}
-                increase={_increase}
-                remove={_remover}
-              />
-            </ScrollView>
+            {cart && cart.length > 0 ? (
+              <ScrollView>
+                <List
+                  cart={cart}
+                  reduction={_reduction}
+                  increase={_increase}
+                  remove={_remover}
+                />
+              </ScrollView>
+            ) : (
+              <View style={styles.emptycontentwrapper}>
+                <Text>Rezerve ürün bulunmuyor</Text>
+              </View>
+            )}
             <View style={styles.floating}>
               <Text style={styles.amount}>Toplam</Text>
               <Text style={styles.amount}>{total}</Text>
@@ -91,6 +97,12 @@ const styles = StyleSheet.create({
 
   contentwrapper: {
     flex: 1,
+  },
+
+  emptycontentwrapper: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   item: {
